@@ -1,0 +1,21 @@
+<div [formGroup]="formGroup">
+  <label>
+    Email: <input type="email" formControlName="email" id="email" />
+  </label>
+  <br /><br />
+  <label>
+    Password:
+    <input type="password" formControlName="password" />
+  </label>
+  <!-- <div *ngIf="email.errors?.['required']">Email is required.</div>
+  <div *ngIf="email.errors?.['minlength']">
+    Name must be at least 4 characters long.
+  </div> -->
+  <br /><br />
+  <input
+    type="submit"
+    name="submit"
+    (click)="onSubmit()"
+    [disabled]="this.formGroup.invalid"
+  />
+</div>
